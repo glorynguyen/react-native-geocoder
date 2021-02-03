@@ -55,7 +55,7 @@ public class RNGeocoderModule extends ReactContextBaseJavaModule {
         }
 
         try {
-            List<Address> addresses = geocoder.getFromLocation(position.getDouble("lat"), position.getDouble("lng"), 20);
+            List<Address> addresses = geocoder.getFromLocation(position.getDouble("lat"), position.getDouble("lng"), 2);
             promise.resolve(transform(addresses));
         }
         catch (IOException e) {
